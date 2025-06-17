@@ -35,7 +35,7 @@ function Layout() {
                 <Col md={11} className="m-0 p-0">
                     <Navbar bg="light" variant="light" className="mx-0">
                         <Container fluid>
-                            <Navbar.Brand href="/dashboard" style={{ fontSize: "25px", fontWeight: "1000" }}>
+                            <Navbar.Brand onClick={() => navigate("/dashboard")} style={{ cursor: "pointer", fontSize: "25px", fontWeight: "1000" }}>
                                 🌎 WanderList - {upcomingTrip?.trip} (
                                 {upcomingTrip ? getCountdown(upcomingTrip.date) : "No trip set"})
                             </Navbar.Brand>
