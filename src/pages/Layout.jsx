@@ -23,11 +23,11 @@ function Layout() {
             <Row style={{ minHeight: '100vh' }}>
                 {/* Sidebar */}
                 <Col sm={1} className="d-flex flex-column justify-content-center align-items-center bg-light">
-                    <Button variant="light" onClick={() => navigate("/listTrip")}>
+                    <Button variant="light" onClick={() => navigate("/dashboard/listTrip")}>
                         <i className="bi bi-airplane" style={{ fontSize: "35px" }}></i>
                         <span> Trips</span>
                     </Button>
-                    <Button variant="light" onClick={() => navigate("/listTodo")}>
+                    <Button variant="light" onClick={() => navigate("/dashboard/listTodo")}>
                         <i className="bi bi-list-ol" style={{ fontSize: "35px" }}></i>
                         <span> Task</span>
                     </Button>
@@ -35,7 +35,7 @@ function Layout() {
                 <Col md={11} className="m-0 p-0">
                     <Navbar bg="light" variant="light" className="mx-0">
                         <Container fluid>
-                            <Navbar.Brand href="/" style={{ fontSize: "25px", fontWeight: "1000" }}>
+                            <Navbar.Brand href="/dashboard" style={{ fontSize: "25px", fontWeight: "1000" }}>
                                 🌎 WanderList - {upcomingTrip?.trip} (
                                 {upcomingTrip ? getCountdown(upcomingTrip.date) : "No trip set"})
                             </Navbar.Brand>
